@@ -1,0 +1,281 @@
+<div class="row p-5 m-3 border">
+    <div class="col-md-3">
+        <nav class="navbar navbar-light bg-light d-flex align-items-start">
+            <ul class="navbar-nav" id="collapseBasic" [hidden]="isCollapsed">
+                <li class="nav-item">
+                    <a class="nav-link">Single</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link">Search</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link">Edit</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link">Log</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Massive Files</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link">Search</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link">Detail</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link">Log</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Process Main</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link">New/Edit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Limit Main</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">User Admin</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link">New/Edit</a>
+                </li>
+            </ul>
+            <button class="navbar-toggler d-block mr-0 ml-auto" type="button" (click)="isCollapsed = !isCollapsed"
+                [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    <div class="col-md-9">
+        <div class="d-flex align-items-start mb-2">
+            <div><b>Single Transaction Search Options</b></div>
+            <div>
+                <button type="button" class="btn btn-outline-secondary"> Search</button>
+                <button type="button" class="btn btn-outline-secondary"> New</button>
+                <button type="button" class="btn btn-outline-secondary"> Edit</button>
+                <button type="button" class="btn btn-outline-secondary"> Validation</button>
+                <button type="button" class="btn btn-outline-secondary"> Confirmation</button>
+                <button type="button" class="btn btn-outline-secondary"> Rejection</button>
+                <button type="button" class="btn btn-outline-secondary"> Cancelation</button>
+                <button type="button" class="btn btn-outline-secondary"> Log</button>
+                <button type="button" class="btn btn-outline-secondary"> Exit</button>
+            </div>
+        </div>
+        <mat-accordion [multi]="true">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Group 1
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Group 1 Description
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+
+                <div class="d-flex justify-content-between">
+                    <div class="form-group form-inline">
+                        <label class="mr-2">process</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label class="mr-2">process Type</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label class="mr-2">Transaction Date</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label class="mr-2">Free Template</label>
+                        <input type="checkbox">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label class="mr-2">Urgent</label>
+                        <input type="checkbox">
+                    </div>
+                </div>
+
+            </mat-expansion-panel>
+
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Debit Movement
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Debit Movement
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+
+
+                <div class="form-group form-inline">
+                    <label class="mr-2">Type of movement</label>
+                    <select>
+                        <option>1</option>
+                    </select>
+                </div>
+
+
+                <div class="d-flex justify-content-between">
+
+                    <div class="form-group form-inline">
+                        <label>Account Number/Contract/Auxiliary/GL</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label>Position</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label>CVC</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label>Value Date</label>
+                        <select>
+                            <option>1</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group form-inline mr-2">
+                        <label class="mr-2">Account Owner Name</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label class="mr-2">Employee</label>
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </mat-expansion-panel>
+
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Credit Movement
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Credit Movement
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+
+
+                <div class="form-group form-inline">
+                    <label>Type of movement</label>
+                    <select>
+                        <option>1</option>
+                    </select>
+                </div>
+
+
+                <div class="d-flex justify-content-between">
+                    <div class="form-group form-inline">
+                        <label>Account Number/Contract/Auxiliary/GL</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label>Position</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label>CVC</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label>Value Date</label>
+                        <select>
+                            <option>1</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group form-inline mr-2">
+                        <label class="mr-2">Account Owner Name</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group form-inline">
+                        <label class="mr-2">Employee</label>
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </mat-expansion-panel>
+
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Group 3
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Group 3
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+
+                <div class="d-flex">
+                    <div class="form-group form-inline mr-2">
+                        <label class="mr-2">Amount</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group form-inline mr-2">
+                        <label class="mr-2">Currency</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+
+                <div class="d-flex">
+                    <div class="form-group form-inline mr-2">
+                        <label class="mr-2">Ip.Ref</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group form-inline mr-2">
+                        <label class="mr-2">DGO.IP.Ref</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group form-inline mr-2">
+                        <label class="mr-2">Application</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group form-inline mr-2">
+                        <label class="mr-2">Client Description</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+
+                <div class="form-group form-inline mr-2">
+                    <label class="mr-2">Note</label>
+                    <input type="text" style="width: 70%;">
+                </div>
+
+
+            </mat-expansion-panel>
+
+        </mat-accordion>
+
+    </div>
+</div>

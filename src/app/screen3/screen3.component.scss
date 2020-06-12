@@ -1,0 +1,12 @@
+input[type="checkbox"],
+button {
+  outline: none;
+}
+.custom_navbar {
+  background-color: #3f51b5;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3px;
+}
